@@ -17,6 +17,11 @@ In another terminal window start up a web server to host the page:
 python -m SimpleHTTPServer 8000
 ```
 
+Now just open up a browser and type this into the navigation bar:
+```
+http://localhost:8000/
+```
+
 ##Technologies
 
 - AngularJS
