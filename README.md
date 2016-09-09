@@ -8,7 +8,7 @@ A simple weather application using data from the [OpenWeatherMap](http://openwea
 
 Type into command line:
 ```
-git clone 
+git clone https://github.com/Linesmerrill/weatherApp
 ```
 Navigate into the weatherApp folder.
 
