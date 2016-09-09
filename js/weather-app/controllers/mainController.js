@@ -48,7 +48,7 @@ app.controller("mainController", function($scope, $http){
 			// the ajax request failed
 			.error(function(data, status) {
 				// set error message
-				$scope.data = 'Oops! The request failed. Try again in 10 minutes';
+				$scope.data = 'Oops! The request failed.';
 
 				// store status code in scope
 				$scope.status = status;
