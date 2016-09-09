@@ -12,7 +12,7 @@ git clone https://github.com/Linesmerrill/weatherApp
 ```
 Navigate into the weatherApp folder.
 
-In another terminal window we want to start up a web server to host the page:
+In another terminal window start up a web server to host the page:
 ```
 python -m SimpleHTTPServer 8000
 ```
