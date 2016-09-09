@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+	<head>
+		<title>Kickflip WeatherApp</title>
+
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="js/modernizr.custom.10824.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/weather-app/app.js"></script>
+		<script src="js/weather-app/controllers/mainController.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body background="./img/clear-sky.jpg" size:cover>
+		<main class="container main-frame" ng-app="WeatherApp" ng-controller="mainController" ng-init="init()">
+			<div class="page-header">
+				<h1>Kickflip WeatherApp</h1>
+			</div>
+
+			<noscript>
+				<article>
+					<div class="alert alert-danger">Javascript is disabled in your web browser. If you <a href="http://www.enable-javascript.com/">enable JavaScript</a>, this text will change.</div>
+				</article>
+			</noscript>
+
+			<div class="hide-on-no-js">
+				<!-- search form -->
+				<form class="form-inline" ng-submit="submit()">
+					<input type="text" class="form-control input-lg" placeholder="Enter town or city" ng-model="loc">
+				</form>
+
+				<!-- ajax loader image -->
+				<div ng-show="loader == 1" class="loader"><img src="img/ajax-loader.gif" alt=" "></div>
+
+				<!-- weather report --->
+				<article ng-show="status == 200 && data.cod == 200">
+					<h1>{{data.name}}</h1>
+					<h4>{{data.sys.country}}</h4>
+					<h1><img ng-src="{{img}}" alt=" " class="pull-left" width="75" height="75"></h1><br>
+					<h4>{{data.weather[0]['description']}}</h4><br>
+					<p><span class="glyphicon glyphicon-menu-up"></span>  &nbsp{{data.main.temp_max | customKelvinToFahrenheitFilter | number:0}}&deg;F&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-menu-down"></span>&nbsp{{data.main.temp_min | customKelvinToFahrenheitFilter | number:0}}&deg;F</p>
+					<font size="7">{{data.main.temp | customKelvinToFahrenheitFilter | number:0}}&deg;F</font><br><br>
+
+
+					<!-- <table class="table table-striped"> -->
+					<h3>Details:</h3>
+					<table class="table">
+						<tbody>
+							<tr>
+								<th>Humidity</th>
+								<td>{{data.main.humidity}}%</td>
+							</tr>
+							<tr>
+								<th>Wind</th>
+								<td>{{data.wind.speed}}mph</td>
+							</tr>
+							<tr>
+								<th>Sunrise</th>
+								<td>{{data.sys.sunrise | customTimeFilter}}</td>
+							</tr>
+							<tr>
+								<th>Sunset</th>
+								<td>{{data.sys.sunset | customTimeFilter}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+
+				<!-- location not found error message --->
+				<article ng-show="status == 200 && data.cod == 404">
+					<div class="alert alert-danger">{{data.message}}</div>
+				</article>
+
+				<!-- failed ajax request error message --->
+				<article ng-show="status == 0">
+					<div class="alert alert-danger">{{data}}</div>
+				</article>
+
+				<!-- ajax response -->
+				<!-- <pre ng-show="data">{{data}}</pre> -->
+			</div>
+		</main>
+	</body>
+</html>
