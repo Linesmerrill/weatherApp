@@ -11,7 +11,7 @@ Download and install Git:
 https://git-scm.com/download/mac
 ```
 
-Type into command line:
+Clone this repo, type this into command line:
 ```
 git clone https://github.com/Linesmerrill/weatherApp
 ```
