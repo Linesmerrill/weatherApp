@@ -6,6 +6,11 @@ A simple weather application using data from the [OpenWeatherMap](http://openwea
 
 ##To Run App
 
+Download and install Git:
+```
+https://git-scm.com/download/mac
+```
+
 Type into command line:
 ```
 git clone https://github.com/Linesmerrill/weatherApp
