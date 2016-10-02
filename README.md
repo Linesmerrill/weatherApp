@@ -5,24 +5,29 @@
 A simple weather application using data from the [OpenWeatherMap](http://openweathermap.org/API) API.
 
 ##To Run App
-
-1.) Download and install Git:
+1.) Install brew:
 ```
-https://git-scm.com/download/mac
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-2.) Clone this repo, type this into command line:
+2.) Install Git:
+```
+brew install git
+```
+
+3.) Clone this repo, type this into command line:
 ```
 git clone https://github.com/Linesmerrill/weatherApp
 ```
-3.) Navigate into the weatherApp folder.
 
-4.) In another terminal window start up a web server to host the page:
+4.) Navigate into the weatherApp folder.
+
+5.) In another terminal window start up a web server to host the page:
 ```
 python -m SimpleHTTPServer 8000
 ```
 
-5.) Now just open up a browser and type this into the navigation bar:
+6.) Now just open up a browser and type this into the navigation bar:
 ```
 http://localhost:8000/
 ```
