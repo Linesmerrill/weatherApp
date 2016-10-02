@@ -21,6 +21,9 @@ git clone https://github.com/Linesmerrill/weatherApp
 ```
 
 4.) Navigate into the weatherApp folder.
+```
+cd weatherApp
+```
 
 5.) In another terminal window start up a web server to host the page:
 ```
