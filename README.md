@@ -44,6 +44,6 @@ http://localhost:8000/
 - Bootstrap
 - Modernizr
 
-##Author
+## Author
 
 Application developed by Merrill Lines
