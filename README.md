@@ -4,7 +4,7 @@
 
 A simple weather application using data from the [OpenWeatherMap](http://openweathermap.org/API) API.
 
-##To Run App
+## To Run App
 1.) Install brew:
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
