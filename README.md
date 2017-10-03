@@ -36,7 +36,7 @@ Now just open up a browser and type this into the navigation bar:
 http://localhost:8000/
 ```
 
-##Technologies
+## Technologies
 
 - AngularJS
 - HTML5
